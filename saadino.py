@@ -15,8 +15,8 @@ class bcolors:
     white = '\033[0m'
     bold = '\033[1m'
     underline = '\033[4m'
-print(bcolors.green + "the password is : saadino")
-original_pin = "saadinodki"  # or '1122'
+print(bcolors.green + "the password is : saadinobdi")
+original_pin = "saadinobdi"  # or '1122'
 count=0
 while count < 3:
     secret_pin = input(bcolors.green + 'Enter the password : '+ bcolors.yellow)
@@ -27,7 +27,7 @@ while count < 3:
         print(bcolors.red + 'wrong password')
         count += 1
 import time  # so we can call time.sleep()
-original_pin = "saadino"
+original_pin = "saadinobdi"
 count=0
 while count < 3:
     secret_pin = input(bcolors.green + 'enter the password again :' + bcolors.yellow)
