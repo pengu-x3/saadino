@@ -77,7 +77,7 @@ while option != 0:
         done = False
 #here is the animation
         def animate():
-            for c in itertools.cycle(['|', '/', '-', '\']):
+            for c in itertools.cycle(['|', '/', '-', '\\']):
                 if done:
                     break
             def generate_random_ip():
