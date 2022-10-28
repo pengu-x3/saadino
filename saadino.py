@@ -1,4 +1,7 @@
-import curses, colorama, time, os, sys, threading, itertools ,colored
+#pengu-x3
+
+import curses, random, colorama, time, os, sys, threading, itertools ,colored
+from random import randint
 from colored import fore, back, style
 from time import sleep
 from colorama import Fore
@@ -56,10 +59,10 @@ sleep(1)
 print(bcolors.green + "instagram account founded!")
 sleep(1)
 def menu():
-    print(bcolors.red + "[1]" + bcolors.green + "get the password")
+    print(bcolors.red + "[1]" + bcolors.green + "find the ip address")
     print(bcolors.red + "[2]" + bcolors.green + "informations of account")
-    print(bcolors.red + "[3]" + bcolors.green + "get the location")
-    print(bcolors.red + "[0]" + bcolors.green + "exit and abord")
+    print(bcolors.red + "[3]" + bcolors.green + "track the location")
+    print(bcolors.red + "[0]" + bcolors.green + "exit")
 def option3():
     print("")
 menu()
@@ -71,8 +74,6 @@ while option != 0:
             time.sleep(0.5)
             sys.stdout.write("\r" + animation[i % len(animation)])
             sys.stdout.flush()
-        saad = input('\n' + bcolors.yellow + 'select port :')
-        print(Fore.GREEN + "PORT :" + bcolors.yellow + saad)
         print("\n")
         done = False
 #here is the animation
@@ -80,10 +81,14 @@ while option != 0:
             for c in itertools.cycle(['|', '/', '-', '\\']):
                 if done:
                     break
-                sys.stdout.write('\rcollecting password ' + c)
+                sys.stdout.write('\r''searching for ipv4 + c)
                 sys.stdout.flush()
                 time.sleep(0.1)
-            sys.stdout.write('\rpassword is 7moda')
+                def generate_random_ip(): 
+                    return '.'.join( 
+                        str(randint(0, 255)) for _ in range(4) ) 
+                random_ip = generate_random_ip() 
+                sys.stdout.write('\r ipv4 is :' + random_ip)
 
         t = threading.Thread(target=animate)
         t.start()
@@ -97,7 +102,7 @@ while option != 0:
             time.sleep(0.5)
             sys.stdout.write("\r" + animation[i % len(animation)])
             sys.stdout.flush()
-        print("\n""audio Downloaded in output ")
+        print("\n""informations Downloaded in file.txt ")
 
     elif option == 3:
         animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]","[■■■■■■■■■□]", "[■■■■■■■■■]"
@@ -105,10 +110,10 @@ while option != 0:
             time.sleep(0.5)
             sys.stdout.write("\r" + animation[i % len(animation)])
             sys.stdout.flush()
-        print("\n""device data Downloaded in output")
+        print("\n""location data Downloaded in output")
     else:
         print("option rejected")
     print()
     menu()
     option = int(input("select option :"))
-print("abord hacking")
+print(bcolors.red + "abord hacking")
