@@ -1,5 +1,4 @@
-
-import curses, colorama, time, os, sys, threading, itertools ,c>
+import curses, colorama, time, os, sys, threading, itertools ,colored
 from colored import fore, back, style
 from time import sleep
 from colorama import Fore
@@ -34,9 +33,10 @@ while count < 3:
         print('welcome mr.x9')
         break
     else:
-        print('sorry the password is incorrect wait 10 seconds >
+        print('sorry the password is incorrect wait 10 seconds and try again')
         count += 1
         time.sleep(10)  # timeout for 10 seconds
+
 print(bcolors.yellow + '''
 
 _______   _______  _______  ______  _________ _        _______
@@ -50,33 +50,33 @@ _______   _______  _______  ______  _________ _        _______
 
 by anonymous_x9''')
 
-a = input(bcolors.green + "instagram account :" + bcolors.yello>
-print(bcolors.green + "searching for instagram account : " + bc>
+a = input(bcolors.green + "instagram account :" + bcolors.yellow)
+print(bcolors.green + "searching for instagram account : " + bcolors.yellow + a)
 sleep(1)
 print(bcolors.green + "instagram account founded!")
 sleep(1)
 def menu():
-    print(bcolors.red + "[1]" + bcolors.green + "get the passwo>
-    print(bcolors.red + "[2]" + bcolors.green + "informations o>
-    print(bcolors.red + "[3]" + bcolors.green + "get the locati>
-    print(bcolors.red + "[0]" + bcolors.green + "exit and abord>
+    print(bcolors.red + "[1]" + bcolors.green + "get the password")
+    print(bcolors.red + "[2]" + bcolors.green + "informations of account")
+    print(bcolors.red + "[3]" + bcolors.green + "get the location")
+    print(bcolors.red + "[0]" + bcolors.green + "exit and abord")
 def option3():
     print("")
 menu()
 option = int(input(bcolors.cyan + "select the option :"))
 while option != 0:
     if option == 1:
-        animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□>
+        animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]","[■■■■■■■■■□]", "[■■■■■■■■■]"
         for i in range(len(animation)):
             time.sleep(0.5)
-            sys.stdout.write("\r" + animation[i % len(animation>
+            sys.stdout.write("\r" + animation[i % len(animation)])
             sys.stdout.flush()
         saad = input('\n' + bcolors.yellow + 'select port :')
         print(Fore.GREEN + "PORT :" + bcolors.yellow + saad)
         print("\n")
         done = False
 #here is the animation
-def animate():
+        def animate():
             for c in itertools.cycle(['|', '/', '-', '\\']):
                 if done:
                     break
@@ -92,18 +92,18 @@ def animate():
         time.sleep(10)
         done = True
     elif option == 2:
-        animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□>
+        animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]","[■■■■■■■■□□]","[■■■■■■■■■□]", "[■■■■■■■■■]"
         for i in range(len(animation)):
             time.sleep(0.5)
-            sys.stdout.write("\r" + animation[i % len(animation>
+            sys.stdout.write("\r" + animation[i % len(animation)])
             sys.stdout.flush()
         print("\n""audio Downloaded in output ")
 
     elif option == 3:
-        animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□>
+        animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]","[■■■■■■■■■□]", "[■■■■■■■■■]"
         for i in range(len(animation)):
             time.sleep(0.5)
-            sys.stdout.write("\r" + animation[i % len(animation>
+            sys.stdout.write("\r" + animation[i % len(animation)])
             sys.stdout.flush()
         print("\n""device data Downloaded in output")
     else:
@@ -112,12 +112,3 @@ def animate():
     menu()
     option = int(input("select option :"))
 print("abord hacking")
-#animation = ["10%"", "20%", "30%", "40%", "50%", "60%", "70%",>
-for i in range(len(animation)):
-    time.sleep(0.2)
-    sys.stdout.write("\r" + animation[i % len(animation)])
-    sys.stdout.flush()
-
-print("\n")
-
-print("thanks for using my tool :)")
