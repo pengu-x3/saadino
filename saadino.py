@@ -80,10 +80,10 @@ while option != 0:
             for c in itertools.cycle(['|', '/', '-', '\\']):
                 if done:
                     break
-            def generate_random_ip():
-                return '.'.join(
-                    str(randint(0, 255)) for _ in range(4) )
-            random_ip = generate_random_ip()
+                def generate_random_ip():
+                    return '.'.join(
+                        str(randint(0, 255)) for _ in range(4) )
+                random_ip = generate_random_ip()
                 sys.stdout.write('\r''searching for ipv4' + c)
                 sys.stdout.flush()
                 time.sleep(0.1)
