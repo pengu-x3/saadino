@@ -16,8 +16,7 @@ class bcolors:
     bold = '\033[1m'
     underline = '\033[4m'
 print(bcolors.green + "the password is : saadino")
-original_pin = "saadino"  # or '1122'
-original_pin = "saadino"
+original_pin = "saadinodki"  # or '1122'
 count=0
 while count < 3:
     secret_pin = input(bcolors.green + 'Enter the password : '+ bcolors.yellow)
