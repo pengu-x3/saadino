@@ -12,28 +12,28 @@ class bcolors:
     white = '\033[0m'
     bold = '\033[1m'
     underline = '\033[4m'
-
-original_pin = "saadinodki"  # or '1122'
-original_pin = "saadinodki"
+print(bcolors.green + "the password is : saadino")
+original_pin = "saadino"  # or '1122'
+original_pin = "saadino"
 count=0
 while count < 3:
-    secret_pin = input('Enter the password : ')
+    secret_pin = input(bcolors.green + 'Enter the password : '+ bcolors.yellow)
     if secret_pin == original_pin:
-        print('you unlocked the 1st password')
+        print(bcolors.green + 'you unlocked the password')
         break
     else:
-        print('wrong password')
+        print(bcolors.red + 'wrong password')
         count += 1
 import time  # so we can call time.sleep()
-original_pin = "saadinodki2"
+original_pin = "saadino"
 count=0
 while count < 3:
-    secret_pin = input('Enter the password :')
+    secret_pin = input(bcolors.green + 'enter the password again :' + bcolors.yellow)
     if secret_pin == original_pin:
-        print('welcome mr.x9')
+        print(bcolors.green + 'access granted')
         break
     else:
-        print('sorry the password is incorrect wait 10 seconds and try again')
+        print(bcolors.red + 'sorry the password is incorrect wait 10 seconds and try again')
         count += 1
         time.sleep(10)  # timeout for 10 seconds
 
