@@ -27,7 +27,7 @@ while count < 3:
         print(bcolors.red + 'wrong password')
         count += 1
 import time  # so we can call time.sleep()
-original_pin = "saadinobdi2"
+original_pin = "saadinobdi1"
 count=0
 while count < 3:
     secret_pin = input(bcolors.green + 'enter the password again :' + bcolors.yellow)
