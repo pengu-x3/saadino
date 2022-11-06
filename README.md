@@ -1,6 +1,6 @@
 
 # 💫 About Me:
-🔭 I’m currently working on some python projects <br>🌱 I’m currently learning python and shell script<br>💬 Don't ask me about
+🔭 I’m currently working on some python projects <br>🌱 I’m currently learning python and shell script<br>💬 Don't ask me about anything
 # This tool tested on:
 <ul>
 <li>Kali Linux</li>
